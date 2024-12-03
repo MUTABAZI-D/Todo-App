@@ -27,30 +27,40 @@ export const AddTodo = () => {
       component={Paper}
       width={400}
       sx={{
-        textAlign: "center",
         margin: "0px auto",
         p: 2,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
       }}
     >
-      <TextField
-        placeholder="Enter todo Item..."
-        variant="standard"
-        InputProps={{
-          disableUnderline: true,
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
         }}
-        {...register("todo", { required: "Please add a todo" })}
-        error={!!errors.todo}
-        helperText={errors.todo?.message}
-      />
-      <Button
-        sx={{ color: "white", backgroundColor: "greenyellow" }}
-        onClick={handleSubmit(onSubmit)}
       >
-        Add
-      </Button>
+        <TextField
+          placeholder="Enter todo Item..."
+          variant="standard"
+          InputProps={{
+            disableUnderline: true,
+          }}
+          {...register("todo", { required: "Please add a todo" })}
+          error={!!errors.todo}
+          helperText={errors.todo?.message}
+        />
+        <Button
+          type="submit"
+          sx={{
+            color: "white",
+            backgroundColor: "greenyellow",
+            "&:hover": {
+              backgroundColor: "limegreen",
+            },
+          }}
+        >
+          Add
+        </Button>
+      </form>
     </Box>
   );
 };
