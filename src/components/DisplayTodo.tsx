@@ -42,6 +42,7 @@ export const DisplayTodo = () => {
               onClick={() => handleDone(todo.id)}
               sx={{
                 fontWeight: "bold",
+                cursor: "pointer",
                 textDecoration: todo.done ? "line-through" : "",
               }}
             >
