@@ -23,7 +23,11 @@ export const DisplayTodo = () => {
   return (
     <Box
       component={Paper}
-      sx={{ width: 420, margin: "20px auto", marginBottom: "80px" }}
+      sx={{
+        width: { xs: 320, md: 420 },
+        margin: "20px auto",
+        marginBottom: "80px",
+      }}
     >
       {todosToDisplay.map((todo) => (
         <Box key={todo.id} sx={{ p: 3 }}>
