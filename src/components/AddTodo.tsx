@@ -25,8 +25,8 @@ export const AddTodo = () => {
   return (
     <Box
       component={Paper}
-      width={400}
       sx={{
+        width: { xs: 300, md: 400 },
         margin: "0px auto",
         p: 2,
       }}

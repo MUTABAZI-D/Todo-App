@@ -21,13 +21,15 @@ export const Footer = () => {
       }}
     >
       <Typography
-        variant="h5"
         component={"div"}
-        sx={{ fontWeight: "bold", mr: 4 }}
+        sx={{ fontWeight: "bold", mr: 4, fontSize: { xs: "19px", md: "25px" } }}
       >
         Total Todos: {todos.length}
       </Typography>
-      <Typography variant="h5" component={"div"} sx={{ fontWeight: "bold" }}>
+      <Typography
+        component={"div"}
+        sx={{ fontWeight: "bold", fontSize: { xs: "19px", md: "25px" } }}
+      >
         Completed Todos: {completedTodos.length}
       </Typography>
     </Box>
